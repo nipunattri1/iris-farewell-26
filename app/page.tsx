@@ -1,63 +1,73 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="min-h-screen bg-background text-foreground font-sans">
+      <nav className="navbar px-8 pt-6">
+        <div className="flex-1">
+          <span className="font-russo text-2xl tracking-tighter uppercase">
+            IRIS
+          </span>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </nav>
+
+      <main className="flex flex-col items-center pt-20 px-4">
+        {/* Main Headline */}
+        <div className="max-w-5xl text-center">
+          <h1 className="font-russo text-6xl md:text-9xl uppercase leading-[0.85] tracking-tighter">
+            Commit. Push. <br />
+            <span className="text-primary italic">Graduate.</span>
+          </h1>
+
+          {/* Bento Grid Container */}
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-5xl">
+
+            {/* Card 1: Main RSVP (Spans 2 columns) */}
+            <div className="md:col-span-2 bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-sm flex flex-col justify-between">
+              <div className="text-left">
+                <span className="text-primary font-russo text-xs uppercase tracking-[0.2em]">Deployment Status</span>
+                <p className="mt-4 text-xl leading-snug opacity-90">
+                  The final pull request has been merged. Join us for the official
+                  decommissioning ceremony of the Class of 2026.
+                </p>
+              </div>
+              <div className="mt-8">
+                <button className="btn btn-primary rounded-full btn-lg h-16 px-8 flex items-center gap-3 group w-full md:w-auto">
+                  <span className="font-bold">RSVP NOW</span>
+                  <div className="bg-black/20 rounded-full w-8 h-8 flex items-center justify-center group-hover:translate-x-1 transition-transform">
+                    →
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            {/* Card 2: Venue Details (Accent Card) */}
+            <div className="bg-secondary text-white p-8 rounded-3xl flex flex-col justify-between shadow-xl">
+              <div className="text-left">
+                <span className="font-russo text-xs uppercase tracking-[0.2em] opacity-80">Location</span>
+                <h2 className="font-russo text-3xl mt-2 leading-none uppercase tracking-tighter">Some <br /> Restaurant</h2>
+                <p className="mt-4 text-sm opacity-90 font-medium tracking-tight">Near Some Place, Mangalore</p>
+              </div>
+
+              <div className="mt-8 flex items-end justify-between">
+                <div className="text-left">
+                  <span className="block text-xs uppercase opacity-70 tracking-widest">Save the Date</span>
+                  <span className="text-2xl font-bold font-russo tracking-tighter">MAR 20</span>
+                  <span className="block text-xs font-bold opacity-80">AT 5:30 PM</span>
+                </div>
+                <div className="h-12 w-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-md border border-white/10">
+                  <span className="text-xl">📍</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Footer Stats */}
+        <div className="mt-20 mb-10 flex flex-wrap justify-center gap-8 md:gap-12 opacity-40 font-russo text-[10px] md:text-xs uppercase tracking-[0.3em]">
+          <div className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div> Local: 127.0.0.1</div>
+          <div>Branch: Main</div>
+          <div>Build: Successful</div>
+          <div>Year: 2026</div>
         </div>
       </main>
     </div>
