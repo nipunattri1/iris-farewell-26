@@ -3,17 +3,19 @@
 @plugin "daisyui";
 
 :root {
-  --background: #1d2132;
-  --foreground: #1d2132;
+  --background: #12141d;
+  --foreground: #ededed;
+  --primary: #d9ff32;
+  --secondary: #7c5dfa;
 }
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary); /* Added semicolon here */
   --font-russo: "Russo One", sans-serif;
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
