@@ -1,9 +1,10 @@
+import { MoveRight } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
-      <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.1]"></div>
+      <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-size-[32px_32px] opacity-[0.1]"></div>
       <nav className="navbar px-8 pt-6">
         <div className="flex-1">
           <span className="font-russo text-2xl tracking-tighter uppercase">
@@ -37,7 +38,7 @@ export default function Home() {
                   <button className="btn btn-primary rounded-full btn-lg h-16 px-8 flex items-center gap-3 group w-full md:w-auto">
                     <span className="font-bold">RSVP NOW</span>
                     <div className="bg-black/20 rounded-full w-8 h-8 flex items-center justify-center group-hover:translate-x-1 transition-transform">
-                      →
+                      <MoveRight />
                     </div>
                   </button>
 
