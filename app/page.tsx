@@ -1,82 +1,127 @@
+'use client';
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { FormEvent, SubmitEventHandler, useState } from "react";
 
 export default function Home() {
+  const [subject, setSubject] = useState("");
+  const [rollNo, setRollNo] = useState("");
+
+  const router = useRouter();
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const encodedName = encodeURIComponent(subject);
+    router.push(`/letter?name=${encodedName}`);
+  };
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans">
-      <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.1]"></div>
-      <nav className="navbar px-8 pt-6">
-        <div className="flex-1">
-          <span className="font-russo text-2xl tracking-tighter uppercase">
-            IRIS
-          </span>
+    <div className="min-h-screen bg-white font-serif p-4 md:p-16 text-black">
+      <div className="max-w-4xl mx-auto border-t-[3px] border-black pt-8">
+
+        <div className="flex justify-between items-start mb-10">
+          <div className="space-y-1 text-sm">
+            <div className="grid grid-cols-[80px_1fr]">
+              <span className="font-bold">From:</span>
+              <span> Team IRIS[iris@nitk.ac.in]</span>
+            </div>
+            <div className="grid grid-cols-[80px_1fr]">
+              <span className="font-bold">Sent:</span>
+              <span>20 March 2026 5:30 PM</span>
+            </div>
+            <div className="grid grid-cols-[80px_1fr]">
+              <span className="font-bold">To:</span>
+              <span>iris.batch.26@nitk.ac.in</span>
+            </div>
+            <div className="grid grid-cols-[80px_1fr]">
+              <span className="font-bold">Subject:</span>
+              <span>Farewell For Members in IRIS Files Leaks</span>
+            </div>
+            <div className="grid grid-cols-[80px_1fr] mt-4">
+              <span className="font-bold">Importance:</span>
+              <span>High</span>
+            </div>
+          </div>
+
+          <img
+            src="/iris.svg"
+            alt="IRIS Logo"
+            className="w-24 h-auto opacity-90 brightness-0"
+          />
         </div>
-      </nav>
 
-      <main className="flex flex-col items-center pt-20 px-4">
-        {/* Main Headline */}
-        <div className="max-w-5xl text-center">
-          <h1 className="font-russo text-6xl md:text-9xl uppercase leading-[0.85] tracking-tighter">
-            Commit. Push. <br />
-            <span className="text-primary italic">Graduate.</span>
-          </h1>
+        {/* Message */}
+        <div className="mb-12 text-[15px] leading-snug">
+          <div className="mb-12 text-[15px] leading-snug">
+            <p className="mb-9 font-normal leading-relaxed">
+              Dear IRIS'26 Member
+              <br /><br />
+              The worst has happened. IRIS Files have been leaded the cache includes clear evidence of <span className="bg-black highlight:text-white px-1 font-bold italic">REDACTED</span> being carried
+              out in the lab,, along with full logs of the <span className="bg-black highlight:text-white px-1 font-bold italic">DATA EXPUNGED</span> incident.
+              <br /><br />
+              Before the authorities, we must convene at
+              the island one last time. we need to sync our stories and bid our final
+              farewells before we all <span className="bg-black highlight:text-white px-1 font-bold uppercase">vanish</span> from the directory.
+              <br />
+              Be present, at <Link className="underline hover:bg-black hover:text-white" href={"https://maps.app.goo.gl/Sy4vTq5QtrgUctCW9"}>Avatar Hotels</Link> By 5 PM
+              <br /><br />Confirm Your Presence by filling these details
+            </p>
 
-          {/* Bento Grid Container */}
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-5xl">
-
-            {/* Card 1: Main RSVP (Spans 2 columns) */}
-            <div className="md:col-span-2 bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-sm flex flex-col justify-between">
-              <div className="text-left">
-                <span className="text-primary font-russo text-xs uppercase tracking-[0.2em]">Deployment Status</span>
-                <p className="mt-4 text-xl leading-snug opacity-90">
-                  The final pull request has been merged. Join us for the official
-                  farewell celebration of the Batch of 2026.
-                </p>
-              </div>
-              <div className="mt-8">
-                <Link href={"/rsvp"}>
-                  <button className="btn btn-primary rounded-full btn-lg h-16 px-8 flex items-center gap-3 group w-full md:w-auto">
-                    <span className="font-bold">RSVP NOW</span>
-                    <div className="bg-black/20 rounded-full w-8 h-8 flex items-center justify-center group-hover:translate-x-1 transition-transform">
-                      →
-                    </div>
-                  </button>
-
-                </Link>
-              </div>
-            </div>
-
-            {/* Card 2: Venue Details (Accent Card) */}
-            <div className="bg-secondary text-white p-8 rounded-3xl flex flex-col justify-between shadow-xl">
-              <div className="text-left">
-                <span className="font-russo text-xs uppercase tracking-[0.2em] opacity-80">Location</span>
-                <h2 className="font-russo text-3xl mt-2 leading-none uppercase tracking-tighter">Some <br /> Restaurant</h2>
-                <p className="mt-4 text-sm opacity-90 font-medium tracking-tight">Near Some Place, Mangalore</p>
+          </div>
+          <form onSubmit={handleSubmit}>
+            <div className="max-w-md space-y-6 py-4">
+              <div className="flex flex-col border-l border-black/20 pl-4">
+                <label className="text-[11px] font-bold uppercase mb-1">Full Legal Name:</label>
+                <input
+                  type="text"
+                  className="bg-transparent border-b border-black/40 py-1 focus:outline-none focus:border-black text-[14px]"
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
+                  required
+                />
               </div>
 
-              <div className="mt-8 flex items-end justify-between">
-                <div className="text-left">
-                  <span className="block text-xs uppercase opacity-70 tracking-widest">Save the Date</span>
-                  <span className="text-2xl font-bold font-russo tracking-tighter">MAR 20</span>
-                  <span className="block text-xs font-bold opacity-80">AT 5:30 PM</span>
-                </div>
-                <div className="h-12 w-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-md border border-white/10">
-                  <span className="text-xl">📍</span>
-                </div>
+              <div className="flex flex-col border-l border-black/20 pl-4">
+                <label className="text-[11px] font-bold uppercase mb-1">Roll Number:</label>
+                <input
+                  type="text"
+                  className="bg-transparent border-b border-black/40 py-1 focus:outline-none focus:border-black text-[14px]"
+                  value={rollNo}
+                  onChange={(e) => setRollNo(e.target.value)}
+                  required
+                />
               </div>
             </div>
+            {/* <Link href={'/letter?name={subject}'} type="submit"> */}
+            <button type="submit" className="text-[13px] font-bold underline decoration-1 underline-offset-2 hover:bg-black hover:text-white px-1 transition-all">
+              Submit Response
+            </button>
+            {/* </Link> */}
+          </form>
+          <div className="mt-10">
 
           </div>
         </div>
 
-        {/* Footer Stats */}
-        <div className="mt-20 mb-10 flex flex-wrap justify-center gap-8 md:gap-12 opacity-40 font-russo text-[10px] md:text-xs uppercase tracking-[0.3em]">
-          <div className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div> Local: 127.0.0.1</div>
-          <div>Branch: Main</div>
-          <div>Build: Successful</div>
-          <div>Year: 2026</div>
-          <div>Author: Team IRIS</div>
+        <div className="mt-16 pt-4">
+          <p className="text-[13px] mb-2 font-sans">----- Original Message -----</p>
+          <div className="space-y-0 text-[13px]">
+            <p><span className="font-bold">From:</span> IRIS Freshers &lt;freshers@iris.nitk.ac.in&gt;</p>
+            <p><span className="font-bold">To:</span> IRIS Seniors</p>
+            <p><span className="font-bold">Sent:</span><span className="bg-black text-white px-1 font-bold">REDACTED</span></p>
+            <p><span className="font-bold">Subject:</span>seems like farewell is going to be epic</p>
+          </div>
+
+          <p className="mt-6 text-[14px] leading-relaxed">
+            I want you to realize that if you don't give farewell to your seniors<span className="bg-black hightlight:text-white px-1 font-bold">you won't recive any too</span>
+            <br /> So I hope something good is being planned by Team
+          </p>
         </div>
-      </main>
-    </div>
+
+        {/* Footer Reference Line */}
+        <div className="mt-16 text-gray-400 break-all text-[10px] tracking-widest">
+          {"*".repeat(95)}
+        </div>
+      </div>
+    </div >
   );
 }
