@@ -41,7 +41,7 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-[80px_1fr]">
               <span className="font-bold">Sent:</span>
-              <span>20 March 2026 5:30 PM</span>
+              <span>20 March 2026 5 PM</span>
             </div>
             <div className="grid grid-cols-[80px_1fr]">
               <span className="font-bold">Subject:</span>
@@ -65,7 +65,7 @@ export default function Home() {
           <div className="mb-12 text-[15px] leading-snug">
             <p className="mb-9 font-normal leading-relaxed">
               Do you think the party is unfit for you. Dw no one is over <span className="bg-black highlight:text-white px-1 font-bold">_____</span>, and all are very <span className="bg-black highlight:text-white px-1 font-bold">____</span>.  I have planted the seed with our invite today. Hope your <span className="bg-black highlight:text-white px-1 font-bold">____</span> will be able to handle it.
-              Here is the final final. I have decided to make a change of the venue from <span className="bg-black highlight:text-white px-1 font-bold">____</span> to <Link className="underline hover:bg-black hover:text-white" href={"https://maps.app.goo.gl/Sy4vTq5QtrgUctCW9"}>Avatar Hotels, Manglore</Link> to reduce the number of travel minutes. I have specially handpicked both <span className="bg-black highlight:text-white px-1 font-bold">Pizzas</span> and <span className="bg-black highlight:text-white px-1 font-bold">Drinks</span> to suite all your needs. We have pizzas, grape juice and ice creams waiting for you on 20th March 5 PM. I was unfortunately not able to get my hands on cheese and hotdog. Whoops!
+              Here is the final final. I have decided to make a change of the venue from <span className="bg-black highlight:text-white px-1 font-bold">____</span> to <Link className="underline hover:bg-black hover:text-white" href={"https://maps.app.goo.gl/Sy4vTq5QtrgUctCW9"}>The Avatar Flexi - 1st Floor</Link> to reduce the number of travel minutes. I have specially handpicked both <span className="bg-black highlight:text-white px-1 font-bold">Pizzas</span> and <span className="bg-black highlight:text-white px-1 font-bold">Drinks</span> to suite all your needs. We have pizzas, grape juice and ice creams waiting for you on 20th March 5 PM. I was unfortunately not able to get my hands on cheese and hotdog. Whoops!
               <br />
               Honestly I'd like to speak on the phone as that's way easier.  I'll be off with snowhite then.
               <br />

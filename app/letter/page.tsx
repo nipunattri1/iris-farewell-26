@@ -24,7 +24,7 @@ function Letter() {
             </div>
             <div className="grid grid-cols-[80px_1fr]">
               <span className="font-bold">Sent:</span>
-              <span>20 March 2026 5:30 PM</span>
+              <span>20 March 2026 5 PM</span>
             </div>
             <div className="grid grid-cols-[80px_1fr]">
               <span className="font-bold">Subject:</span>
