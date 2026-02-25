@@ -56,7 +56,7 @@ function Letter() {
               <div className="border-l-4 border-black pl-4 mb-9">
                 <p className="text-sm uppercase tracking-widest opacity-80">
                   Identity: <Suspense fallback={<span className="bg-black text-white px-1 uppercase">name</span>}>{para.get('name')}</Suspense> <br />
-                  Arrival: 5 PM<br />
+                  Arrival: 20 March, 5 PM<br />
                   Extraction Point: <Link className="underline hover:bg-black hover:text-white" href={"https://maps.app.goo.gl/Sy4vTq5QtrgUctCW9"}>Avatar Hotels, Manglore</Link>
                 </p>
               </div>
