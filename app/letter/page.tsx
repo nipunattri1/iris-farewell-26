@@ -12,37 +12,40 @@ function Letter() {
     <div className="min-h-screen bg-white font-serif p-4 md:p-16 text-black">
       <div className="max-w-4xl mx-auto border-t-[3px] border-black pt-8">
 
-        <div className="flex justify-between items-start mb-10">
-          <div className="space-y-1 text-sm">
-            <div className="grid grid-cols-[80px_1fr]">
+        <div className="flex flex-row justify-between items-start gap-4 mb-10">
+          <div className="space-y-1 text-sm min-w-0">
+            <div className="grid grid-cols-[100px_1fr] gap-x-2">
               <span className="font-bold">From:</span>
               <span>Team IRIS &lt;team@iris.nitk.ac.in&gt;</span>
             </div>
-            <div className="grid grid-cols-[80px_1fr]">
+
+            <div className="grid grid-cols-[100px_1fr] gap-x-2">
               <span className="font-bold">To:</span>
               <span>IRIS 26 &lt;iris26@iris.nitk.ac.in&gt;</span>
             </div>
-            <div className="grid grid-cols-[80px_1fr]">
+
+            <div className="grid grid-cols-[100px_1fr] gap-x-2">
               <span className="font-bold">Sent:</span>
               <span>20 March 2026 5 PM</span>
             </div>
-            <div className="grid grid-cols-[80px_1fr]">
+
+            <div className="grid grid-cols-[100px_1fr] gap-x-2 items-start">
               <span className="font-bold">Subject:</span>
-              <span className="bg-black highlight:text-white px-1 font-bold">Farewell For Members in IRIS Files Leaks</span>
+              <span className="bg-black highlight:text-white px-1 font-bold">Re: Farewell For Members in IRIS Files Leaks</span>
             </div>
-            <div className="grid grid-cols-[80px_1fr] mt-4">
+
+            <div className="grid grid-cols-[100px_1fr] gap-x-2 mt-4">
               <span className="font-bold">Importance:</span>
-              <span>High</span>
+              <span className="font-bold uppercase tracking-tight">High</span>
             </div>
           </div>
 
           <img
             src="/iris.svg"
             alt="IRIS Logo"
-            className="w-24 h-auto opacity-90 brightness-0"
+            className="w-16 md:w-24 h-auto opacity-90 brightness-0 shrink-0"
           />
         </div>
-
         {/* Message */}
         <div className="mb-12 text-[15px] leading-snug">
           <div className="mb-12 text-[15px] leading-snug">
@@ -50,9 +53,9 @@ function Letter() {
               <h2 className="text-xl font-bold mb-6 tracking-tighter">Presence Confirmed</h2>
 
               <p className="mb-6 font-normal leading-relaxed">
-                Your presence has been confirmed. See you in the 
+                Your presence has been confirmed. See you in the
                 <span className="bg-black italic font-semibold"> IRIS'26 </span>
-                 party.
+                party.
               </p>
 
               <div className="border-l-4 border-black pl-4 mb-9">
