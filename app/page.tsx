@@ -1,19 +1,32 @@
 'use client';
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { FormEvent, SubmitEventHandler, useState } from "react";
+import { FormEvent, useState } from "react";
+import { createRegistration } from "./letter/actions/rsvp";
 
 export default function Home() {
-  const [subject, setSubject] = useState("");
-  const [rollNo, setRollNo] = useState("");
 
   const router = useRouter();
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const encodedName = encodeURIComponent(subject);
-    router.push(`/letter?name=${encodedName}`);
-  };
+  const [name, setName] = useState("")
+  const [rollNo, setRollNo] = useState("")
+  const [loading, setLoading] = useState(false)
+
+  async function onSubmit(e: React.SubmitEvent) {
+    e.preventDefault(); // Stop the page reload
+    setLoading(true);
+    try {
+      await createRegistration({ name, rollNo });
+      const encodedName = encodeURIComponent(name);
+      router.push(`/letter?name=${encodedName}`);
+
+      alert("Saved successfully!");
+    } catch (error) {
+      console.error("Failed to save:", error);
+    }
+    setLoading(false);
+  }
+
   return (
     <div className="min-h-screen bg-white font-serif p-4 md:p-16 text-black">
       <div className="max-w-4xl mx-auto border-t-[3px] border-black pt-8">
@@ -62,15 +75,15 @@ export default function Home() {
             </p>
 
           </div>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={onSubmit}>
             <div className="max-w-md space-y-6 py-4">
               <div className="flex flex-col border-l border-black/20 pl-4">
                 <label className="text-[11px] font-bold uppercase mb-1">Full Legal Name:</label>
                 <input
                   type="text"
                   className="bg-transparent border-b border-black/40 py-1 focus:outline-none focus:border-black text-[14px]"
-                  value={subject}
-                  onChange={(e) => setSubject(e.target.value)}
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   required
                 />
               </div>
@@ -87,7 +100,7 @@ export default function Home() {
               </div>
             </div>
             {/* <Link href={'/letter?name={subject}'} type="submit"> */}
-            <button type="submit" className="text-[13px] font-bold underline decoration-1 underline-offset-2 hover:bg-black hover:text-white px-1 transition-all">
+            <button type="submit" className={`text-[13px] font-bold underline decoration-1 underline-offset-2 ${loading ? `animate-pulse` : ``} hover:bg-black hover:text-white px-1 transition-all`}>
               Submit Response
             </button>
             {/* </Link> */}
