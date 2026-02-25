@@ -5,21 +5,7 @@ import { Suspense, useState } from "react";
 import { createRegistration } from "./actions/rsvp";
 
 function Letter() {
-    const [name, setName] = useState("")
-    const [rollNo, setRollNo] = useState("")
-    const [loading, setLoading] = useState(false)
-  
-    async function onSubmit(e: React.SubmitEvent) {
-      e.preventDefault(); // Stop the page reload
-  
-      // Call the server action with the data
-      try {
-        await createRegistration({ name, rollNo });
-        alert("Saved successfully!");
-      } catch (error) {
-        console.error("Failed to save:", error);
-      }
-    }
+
 
   const para = useSearchParams()
   return (

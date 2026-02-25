@@ -19,8 +19,6 @@ export default function Home() {
       await createRegistration({ name, rollNo });
       const encodedName = encodeURIComponent(name);
       router.push(`/letter?name=${encodedName}`);
-
-      alert("Saved successfully!");
     } catch (error) {
       console.error("Failed to save:", error);
     }
