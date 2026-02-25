@@ -14,19 +14,19 @@ function Letter() {
           <div className="space-y-1 text-sm">
             <div className="grid grid-cols-[80px_1fr]">
               <span className="font-bold">From:</span>
-              <span> Team IRIS[iris@nitk.ac.in]</span>
+              <span>Team IRIS &lt;team@iris.nitk.ac.in&gt;</span>
+            </div>
+            <div className="grid grid-cols-[80px_1fr]">
+              <span className="font-bold">To:</span>
+              <span>IRIS 26 &lt;iris26@iris.nitk.ac.in&gt;</span>
             </div>
             <div className="grid grid-cols-[80px_1fr]">
               <span className="font-bold">Sent:</span>
               <span>20 March 2026 5:30 PM</span>
             </div>
             <div className="grid grid-cols-[80px_1fr]">
-              <span className="font-bold">To:</span>
-              <span>iris.batch.26@nitk.ac.in</span>
-            </div>
-            <div className="grid grid-cols-[80px_1fr]">
               <span className="font-bold">Subject:</span>
-              <span>Re: Farewell For Members in IRIS Files Leaks</span>
+              <span className="bg-black highlight:text-white px-1 font-bold">Farewell For Members in IRIS Files Leaks</span>
             </div>
             <div className="grid grid-cols-[80px_1fr] mt-4">
               <span className="font-bold">Importance:</span>
@@ -45,24 +45,24 @@ function Letter() {
         <div className="mb-12 text-[15px] leading-snug">
           <div className="mb-12 text-[15px] leading-snug">
             <div className="max-w-2xl mx-auto p-6 border border-gray-800 bg-opacity-50">
-              <h2 className="text-xl font-bold mb-6 tracking-tighter">CONFIRMATION_LOGGED</h2>
+              <h2 className="text-xl font-bold mb-6 tracking-tighter">Presence Confirmed</h2>
 
               <p className="mb-6 font-normal leading-relaxed">
-                Your coordinates have been pinned. The
-                <span className="italic font-semibold"> IRIS'26 </span>
-                contingency plan is now in effect.
+                Your presence has been confirmed. See you in the 
+                <span className="bg-black italic font-semibold"> IRIS'26 </span>
+                 party.
               </p>
 
               <div className="border-l-4 border-black pl-4 mb-9">
                 <p className="text-sm uppercase tracking-widest opacity-80">
                   Identity: <Suspense fallback={<span className="bg-black text-white px-1 uppercase">name</span>}>{para.get('name')}</Suspense> <br />
                   Arrival: 20 March, 5 PM<br />
-                  Extraction Point: <Link className="underline hover:bg-black hover:text-white" href={"https://maps.app.goo.gl/Sy4vTq5QtrgUctCW9"}>Avatar Hotels, Manglore</Link>
+                  VENUE: <Link className="underline hover:bg-black hover:text-white" href={"https://maps.app.goo.gl/Sy4vTq5QtrgUctCW9"}>Avatar Hotels, Manglore</Link>
                 </p>
               </div>
 
               <p className="mb-9 font-normal leading-relaxed italic">
-                "The silence is the only thing we have left to protect."
+                Your entertainment will be available immediately on arrival
               </p>
 
               <p className="text-xs opacity-50">
@@ -81,17 +81,13 @@ function Letter() {
         <div className="mt-16 pt-4">
           <p className="text-[13px] mb-2 font-sans">----- Original Message -----</p>
           <div className="space-y-0 text-[13px]">
-            <p><span className="font-bold">From:</span> Team IRIS[iris@nitk.ac.in]</p>
-            <p><span className="font-bold">To:</span> iris.batch.26@nitk.ac.in</p>
-            <p><span className="font-bold">Sent:</span><span className="bg-black text-white px-1 font-bold">REDACTED</span></p>
-            <p><span className="font-bold">Subject:</span>Farewell For Members in IRIS Files Leaks</p>
+            <p><span className="font-bold">From:</span> Team IRIS &lt;team@nitk.ac.in&gt;</p>
+            <p><span className="font-bold">To:</span> IRIS 26 &lt;iris26@nitk.ac.in&gt;</p>
+            <p><span className="font-bold">Subject:</span><span className="bg-black highlight:text-white px-1 font-bold">Farewell For Members in IRIS Files Leaks</span></p>
           </div>
 
           <p className="mt-6 text-[14px] leading-relaxed">
-            Dear IRIS'26 Member
-            <br />
-            The worst has happened. IRIS Files have been leaded the cache includes clear evidence of <span className="bg-black highlight:text-white px-1 font-bold italic">REDACTED</span> being carried
-            out in the lab,,
+            Do you think the party is unfit for you. Dw no one is over <span className="bg-black highlight:text-white px-1 font-bold">_____</span>, and all are very <span className="bg-black highlight:text-white px-1 font-bold">____</span>.  I have planted the seed with our invite today. Hope your <span className="bg-black highlight:text-white px-1 font-bold">____</span> will be able to handle it. Here is the final final.<br />...
           </p>
         </div>
         <br />

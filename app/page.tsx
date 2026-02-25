@@ -22,19 +22,19 @@ export default function Home() {
           <div className="space-y-1 text-sm">
             <div className="grid grid-cols-[80px_1fr]">
               <span className="font-bold">From:</span>
-              <span> Team IRIS[iris@nitk.ac.in]</span>
+              <span>Team IRIS &lt;team@iris.nitk.ac.in&gt;</span>
+            </div>
+            <div className="grid grid-cols-[80px_1fr]">
+              <span className="font-bold">To:</span>
+              <span>IRIS 26 &lt;iris26@iris.nitk.ac.in&gt;</span>
             </div>
             <div className="grid grid-cols-[80px_1fr]">
               <span className="font-bold">Sent:</span>
               <span>20 March 2026 5:30 PM</span>
             </div>
             <div className="grid grid-cols-[80px_1fr]">
-              <span className="font-bold">To:</span>
-              <span>iris.batch.26@nitk.ac.in</span>
-            </div>
-            <div className="grid grid-cols-[80px_1fr]">
               <span className="font-bold">Subject:</span>
-              <span>Farewell For Members in IRIS Files Leaks</span>
+              <span className="bg-black highlight:text-white px-1 font-bold">Farewell For Members in IRIS Files Leaks</span>
             </div>
             <div className="grid grid-cols-[80px_1fr] mt-4">
               <span className="font-bold">Importance:</span>
@@ -53,17 +53,12 @@ export default function Home() {
         <div className="mb-12 text-[15px] leading-snug">
           <div className="mb-12 text-[15px] leading-snug">
             <p className="mb-9 font-normal leading-relaxed">
-              Dear IRIS'26 Member
-              <br /><br />
-              The worst has happened. IRIS Files have been leaded the cache includes clear evidence of <span className="bg-black highlight:text-white px-1 font-bold italic">REDACTED</span> being carried
-              out in the lab,, along with full logs of the <span className="bg-black highlight:text-white px-1 font-bold italic">DATA EXPUNGED</span> incident.
-              <br /><br />
-              Before the authorities, we must convene at
-              the island one last time. we need to sync our stories and bid our final
-              farewells before we all <span className="bg-black highlight:text-white px-1 font-bold uppercase">vanish</span> from the directory.
+              Do you think the party is unfit for you. Dw no one is over <span className="bg-black highlight:text-white px-1 font-bold">_____</span>, and all are very <span className="bg-black highlight:text-white px-1 font-bold">____</span>.  I have planted the seed with our invite today. Hope your <span className="bg-black highlight:text-white px-1 font-bold">____</span> will be able to handle it.
+              Here is the final final. I have decided to make a change of the venue from <span className="bg-black highlight:text-white px-1 font-bold">____</span> to <Link className="underline hover:bg-black hover:text-white" href={"https://maps.app.goo.gl/Sy4vTq5QtrgUctCW9"}>Avatar Hotels, Manglore</Link> to reduce the number of travel minutes. I have specially handpicked both <span className="bg-black highlight:text-white px-1 font-bold">Pizzas</span> and <span className="bg-black highlight:text-white px-1 font-bold">Drinks</span> to suite all your needs. We have pizzas, grape juice and ice creams waiting for you on 20th March 5 PM. I was unfortunately not able to get my hands on cheese and hotdog. Whoops!
               <br />
-              Be present, at <Link className="underline hover:bg-black hover:text-white" href={"https://maps.app.goo.gl/Sy4vTq5QtrgUctCW9"}>Avatar Hotels</Link> By 5 PM
-              <br /><br />Confirm Your Presence by filling these details
+              Honestly I'd like to speak on the phone as that's way easier.  I'll be off with snowhite then.
+              <br />
+              You'll regret missing the party as it's definitely gonna be a memorable experience.
             </p>
 
           </div>
@@ -105,15 +100,17 @@ export default function Home() {
         <div className="mt-16 pt-4">
           <p className="text-[13px] mb-2 font-sans">----- Original Message -----</p>
           <div className="space-y-0 text-[13px]">
-            <p><span className="font-bold">From:</span> IRIS Freshers &lt;freshers@iris.nitk.ac.in&gt;</p>
-            <p><span className="font-bold">To:</span> IRIS Seniors</p>
-            <p><span className="font-bold">Sent:</span><span className="bg-black text-white px-1 font-bold">REDACTED</span></p>
+            <p><span className="font-bold">From:</span> IRIS 26 &lt;iris26@iris.nitk.ac.in&gt;</p>
+            <p><span className="font-bold">To:</span> Team IRIS &lt;team@iris.nitk.ac.in&gt;</p>
+            <p><span className="font-bold">Sent:</span><span className="bg-black text-black px-1 font-bold">REDACTED</span></p>
             <p><span className="font-bold">Subject:</span>seems like farewell is going to be epic</p>
           </div>
 
           <p className="mt-6 text-[14px] leading-relaxed">
-            I want you to realize that if you don't give farewell to your seniors<span className="bg-black hightlight:text-white px-1 font-bold">you won't recive any too</span>
-            <br /> So I hope something good is being planned by Team
+            We are still on the fence about the event. I need to know if the environment is going to be 'correct' for what we discussed.
+            I need a setup that is efficient and private. Let me know if you can fix the travel and if the 'entertainment' is actually what you promised.
+            <br />
+            Waiting on the final details.
           </p>
         </div>
 
