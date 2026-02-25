@@ -8,7 +8,7 @@ export default async function ResponsesPage({
   searchParams: { [key: string]: string | string[] | undefined };
 }) {
   const password = (await searchParams).pass;
-  const AUTHORIZED_PASS = "showhite";
+  const AUTHORIZED_PASS = "snowhite";
 
   if (password !== AUTHORIZED_PASS) {
     return (
