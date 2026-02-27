@@ -15,5 +15,5 @@ model Response {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
   name      String?
-  rollNo    String   @unique
+  rollNo    String   
 }
