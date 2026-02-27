@@ -8,4 +8,4 @@
 DROP INDEX "Response_rollNo_key";
 
 -- AlterTable
-ALTER TABLE "Response" DROP COLUMN "attending";
+-- ALTER TABLE "Response" DROP COLUMN "attending";
